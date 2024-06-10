@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="verification.css">
+</head>
+<body>
+    <div class="verification-container">
+        <div class="verification-box">
+            <img src="layout_set_logo 1.png" alt="Gresham Logo" class="logo">
+            <h2>Email Verification</h2>
+            <p>A <span class="highlight-text">Four (4)</span> digit Code has been sent to the email address you provided.</p>
+            <input type="text" class="input-field" id="verificationCode" placeholder="Input verification code">
+            <div class="resend-container">
+                <p>Didn't receive the code? <a href="#" class="resend-link">Resend Code</a></p>
+            </div>
+            <button class="verify-button" onclick="verifyCode()">Verify</button>
+        </div>
+    </div>
+
+    <div class="popup-container" id="verificationPopup">
+        <div class="popup">
+            <img src="Icon.png" alt="Success" class="checkmark">
+            <h3>Verification Successful</h3>
+            <p>You have successfully verified your email address. Proceed to verify your phone number.</p>
+            <button onclick="proceed()">Proceed</button>
+        </div>
+    </div>
+
+    <div class="popup-container" id="errorVerificationPopup">
+        <div class="popup">
+            <img src="codicon_error.png" alt="Error" class="checkmark">
+            <h3>Verification Failed</h3>
+            <p>Your email address could not be verified! Kindly try again!</p>
+            <button onclick="retry()">Cancel</button>
+        </div>
+    </div>
+        <script>
+           function verifyCode() {
+            const enteredCode = document.getElementById('verificationCode').value;
+            const correctCode = '1234'; // Replace with the actual verification logic or code
+
+            if (enteredCode === correctCode) {
+                document.getElementById('verificationPopup').style.display = "block";
+            } else {
+                document.getElementById('errorVerificationPopup').style.display = "block";
+            }
+        }
+
+        function proceed() {
+            window.location.href = 'phoneverification.html'; // Update with the correct URL
+        }
+
+        function retry() {
+            document.getElementById('errorVerificationPopup').style.display = "none";
+        }
+        </script>
+</body>
+</html>

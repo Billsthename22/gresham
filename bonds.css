@@ -1,0 +1,40 @@
+.bmv{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+.input input{
+    width: 555px;
+    height: 50px;
+    border-radius: 10px;
+    border:  2px solid rgba(255, 255, 255, 1);
+    background-color: black;
+}
+.vls{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.vl{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.sub{
+    width: 113px;
+    gap: 10px;
+    border-bottom: 0.5px solid rgba(33, 158, 204, 1) ;
+}
+.text{
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.detbox{
+display: flex;
+flex-direction: column;
+}
+.img img{
+    width: 40px;
+    height: 40px;
+}
